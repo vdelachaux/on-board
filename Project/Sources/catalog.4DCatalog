@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="on-board" uuid="21EDECF8EA6A4C419872E0689523A5F7" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<base_extra>
+		<temp_folder folder_selector="data"/>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
