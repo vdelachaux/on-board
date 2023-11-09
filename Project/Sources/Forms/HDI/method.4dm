@@ -8,5 +8,7 @@ Case of
 		
 		Form:C1466.alert:=cs:C1710.onBoard.new("alert"; "MESSAGE")
 		
+		Form:C1466.progress:=cs:C1710.onBoard.new("progress"; "PROGRESS")
+		
 		//______________________________________________________
 End case 

@@ -13,11 +13,13 @@
 	"(Default Tables)": {},
 	"HDI": {
 		"methods": [
-			"Demo"
+			"COMPILER_DEMO",
+			"DO SOMETHING"
 		],
 		"forms": [
 			"HDI",
-			"MESSAGE"
+			"MESSAGE",
+			"PROGRESS"
 		]
 	},
 	"trash": {

@@ -73,6 +73,15 @@
 					"sizingX": "move",
 					"sizingY": "move",
 					"focusable": false
+				},
+				"progress": {
+					"type": "subform",
+					"left": 48,
+					"top": 393,
+					"width": 20,
+					"height": 20,
+					"sizingX": "grow",
+					"sizingY": "grow"
 				}
 			}
 		},
@@ -86,7 +95,8 @@
 					"width": 666,
 					"height": 29,
 					"fontSize": 24,
-					"textAlign": "center"
+					"textAlign": "center",
+					"sizingX": "grow"
 				}
 			}
 		},
@@ -100,7 +110,21 @@
 					"width": 666,
 					"height": 29,
 					"fontSize": 24,
-					"textAlign": "center"
+					"textAlign": "center",
+					"sizingX": "grow"
+				},
+				"doSomething": {
+					"type": "button",
+					"text": "Do something",
+					"top": 73,
+					"left": 37,
+					"width": 141,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/doSomething.4dm",
+					"focusable": false
 				}
 			}
 		},
@@ -114,12 +138,13 @@
 					"width": 666,
 					"height": 29,
 					"fontSize": 24,
-					"textAlign": "center"
+					"textAlign": "center",
+					"sizingX": "grow"
 				}
 			}
 		}
 	],
-	"geometryStamp": 118,
+	"geometryStamp": 143,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
