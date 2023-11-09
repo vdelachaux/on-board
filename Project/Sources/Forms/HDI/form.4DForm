@@ -1,0 +1,133 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onResize"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 21,
+					"left": 19,
+					"width": 666,
+					"height": 358,
+					"action": "gotoPage",
+					"labels": [
+						"Page 1",
+						"Page 2",
+						"Page 3"
+					],
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"alert": {
+					"type": "subform",
+					"left": 19,
+					"top": 393,
+					"width": 20,
+					"height": 20,
+					"method": "ObjectMethods/alert.4dm",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"Close": {
+					"type": "button",
+					"text": "Close",
+					"top": 392,
+					"left": 599,
+					"width": 86,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"sizingX": "move",
+					"sizingY": "move",
+					"focusable": false
+				},
+				"showAlert": {
+					"type": "button",
+					"text": "Show alert",
+					"top": 392,
+					"left": 486,
+					"width": 93,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/showAlert.4dm",
+					"sizingX": "move",
+					"sizingY": "move",
+					"focusable": false
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "Page 1",
+					"top": 186,
+					"left": 19,
+					"width": 666,
+					"height": 29,
+					"fontSize": 24,
+					"textAlign": "center"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"text": "Page 2",
+					"top": 186,
+					"left": 19,
+					"width": 666,
+					"height": 29,
+					"fontSize": 24,
+					"textAlign": "center"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text2": {
+					"type": "text",
+					"text": "Page 3",
+					"top": 186,
+					"left": 19,
+					"width": 666,
+					"height": 29,
+					"fontSize": 24,
+					"textAlign": "center"
+				}
+			}
+		}
+	],
+	"geometryStamp": 106,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
