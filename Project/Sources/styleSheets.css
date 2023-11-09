@@ -1,0 +1,11 @@
+.background {
+	sizingX: "grow";
+	sizingY: "grow";
+	stroke: transparent;
+	fill: #ffb6c1;
+}
+@media (prefers-color-scheme: dark) {
+	.background {
+		fill: #da70d6;
+	}
+}

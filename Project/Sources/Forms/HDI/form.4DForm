@@ -9,8 +9,6 @@
 	"windowMinHeight": 0,
 	"windowMaxWidth": 32767,
 	"windowMaxHeight": 32767,
-	"rightMargin": 20,
-	"bottomMargin": 20,
 	"events": [
 		"onLoad",
 		"onResize"
@@ -121,7 +119,7 @@
 			}
 		}
 	],
-	"geometryStamp": 106,
+	"geometryStamp": 118,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
@@ -129,5 +127,7 @@
 		"views": {
 			"View 1": {}
 		}
-	}
+	},
+	"width": 705,
+	"height": 434
 }
