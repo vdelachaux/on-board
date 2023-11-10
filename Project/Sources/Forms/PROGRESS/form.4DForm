@@ -74,7 +74,10 @@
 					"left": 80,
 					"top": 84,
 					"width": 383,
-					"height": 16
+					"height": 16,
+					"max": 100,
+					"min": 0,
+					"graduationStep": 1
 				}
 			}
 		}

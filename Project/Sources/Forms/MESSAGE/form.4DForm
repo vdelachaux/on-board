@@ -12,8 +12,8 @@
 	"rightMargin": 0,
 	"bottomMargin": 0,
 	"events": [
-		"onResize",
-		"onBoundVariableChange"
+		"onLoad",
+		"onResize"
 	],
 	"windowTitle": "window title",
 	"destination": "detailScreen",

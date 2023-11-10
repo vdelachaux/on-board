@@ -3,7 +3,7 @@
 	"cs.onBoard": {
 		"onBoard": {
 			"new()": {
-				"Syntax": "**.new**( *name* : Text; *form* : Text )",
+				"Syntax": "**.new**( *name* : Text; *form* : Text; *parent* : Object )",
 				"Params": [
 					[
 						"name",
@@ -14,6 +14,11 @@
 						"form",
 						"Text",
 						"->"
+					],
+					[
+						"parent",
+						"Object",
+						"->"
 					]
 				],
 				"Summary": ""
@@ -21,9 +26,30 @@
 		}
 	},
 	"onBoard": {
-		"resize()": {
-			"Syntax": "**.resize**()",
+		"onResize()": {
+			"Syntax": "**.onResize**()",
 			"Params": [],
+			"Summary": ""
+		},
+		"onLoad()": {
+			"Syntax": "**.onLoad**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"setProgress()": {
+			"Syntax": "**.setProgress**( *progress* : Integer; *message* : Text )",
+			"Params": [
+				[
+					"progress",
+					"Integer",
+					"->"
+				],
+				[
+					"message",
+					"Text",
+					"->"
+				]
+			],
 			"Summary": ""
 		},
 		"show()": {
