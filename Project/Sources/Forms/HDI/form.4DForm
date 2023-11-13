@@ -62,16 +62,14 @@
 				"showAlert": {
 					"type": "button",
 					"text": "Show alert",
-					"top": 392,
-					"left": 486,
+					"top": 63,
+					"left": 33,
 					"width": 93,
 					"height": 22,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/showAlert.4dm",
-					"sizingX": "move",
-					"sizingY": "move",
 					"focusable": false
 				}
 			}
@@ -107,8 +105,8 @@
 				"doSomething": {
 					"type": "button",
 					"text": "Do something",
-					"top": 73,
-					"left": 37,
+					"top": 96,
+					"left": 34,
 					"width": 141,
 					"height": 22,
 					"events": [
@@ -135,7 +133,7 @@
 			}
 		}
 	],
-	"geometryStamp": 147,
+	"geometryStamp": 152,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
@@ -145,5 +143,6 @@
 		}
 	},
 	"width": 705,
-	"height": 434
+	"height": 434,
+	"inheritedForm": "BACKGROUND"
 }
