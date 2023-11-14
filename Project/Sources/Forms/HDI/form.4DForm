@@ -34,13 +34,13 @@
 					"sizingX": "grow",
 					"sizingY": "grow"
 				},
-				"onBoard": {
+				"dialog": {
 					"type": "subform",
 					"left": 19,
 					"top": 393,
 					"width": 20,
 					"height": 20,
-					"method": "ObjectMethods/onBoard.4dm",
+					"method": "ObjectMethods/dialog.4dm",
 					"sizingX": "grow",
 					"sizingY": "grow"
 				},
@@ -129,11 +129,24 @@
 					"fontSize": 24,
 					"textAlign": "center",
 					"sizingX": "grow"
+				},
+				"showSelector": {
+					"type": "button",
+					"text": "Selector",
+					"top": 91,
+					"left": 31,
+					"width": 93,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/showSelector.4dm",
+					"focusable": false
 				}
 			}
 		}
 	],
-	"geometryStamp": 152,
+	"geometryStamp": 161,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
@@ -143,6 +156,5 @@
 		}
 	},
 	"width": 705,
-	"height": 434,
-	"inheritedForm": "BACKGROUND"
+	"height": 434
 }

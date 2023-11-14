@@ -19,55 +19,29 @@
 	"destination": "detailScreen",
 	"pages": [
 		{
-			"objects": {
-				"background": {
-					"type": "picture",
-					"top": 0,
-					"left": 0,
-					"width": 542,
-					"height": 315,
-					"picture": "/RESOURCES/Images/back.png",
-					"pictureFormat": "tiled",
-					"sizingX": "grow",
-					"sizingY": "grow"
-				},
-				"backButton": {
-					"type": "button",
-					"text": "Button",
-					"top": 0,
-					"left": 0,
-					"width": 542,
-					"height": 315,
-					"events": [
-						"onClick"
-					],
-					"display": false,
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"method": "ObjectMethods/backButton.4dm"
-				}
-			}
+			"objects": {}
 		},
 		{
 			"objects": {
-				"Rectangle": {
+				"main": {
 					"type": "rectangle",
 					"top": 56,
-					"left": 53,
+					"left": 52,
 					"width": 436,
 					"height": 136,
 					"borderRadius": 10,
-					"fill": "automatic"
+					"fill": "automatic",
+					"stroke": "automatic"
 				},
 				"title": {
 					"type": "text",
-					"text": "Form.title",
 					"top": 70,
-					"left": 69,
+					"left": 68,
 					"width": 404,
 					"height": 16,
 					"fontTheme": "main",
-					"textAlign": "center"
+					"textAlign": "center",
+					"text": "Form.title"
 				},
 				"ok": {
 					"type": "button",
@@ -91,7 +65,7 @@
 					"type": "text",
 					"text": "Form.additional",
 					"top": 99,
-					"left": 69,
+					"left": 68,
 					"width": 404,
 					"height": 52,
 					"fontTheme": "additional",
@@ -100,7 +74,7 @@
 			}
 		}
 	],
-	"geometryStamp": 81,
+	"geometryStamp": 91,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
@@ -108,5 +82,6 @@
 			"View 1": {}
 		}
 	},
-	"method": "method.4dm"
+	"method": "method.4dm",
+	"inheritedForm": "BACK"
 }

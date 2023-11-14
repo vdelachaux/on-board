@@ -17,9 +17,11 @@
 			"DO SOMETHING"
 		],
 		"forms": [
+			"BACK",
 			"HDI",
 			"MESSAGE",
-			"PROGRESS"
+			"PROGRESS",
+			"SELECTOR"
 		]
 	},
 	"trash": {

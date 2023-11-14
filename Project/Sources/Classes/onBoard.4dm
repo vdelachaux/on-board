@@ -53,13 +53,30 @@ Function show($data : Object)
 		
 	End if 
 	
-	// Populate data if any
-	var $key : Text
-	For each ($key; $data)
+	// Reset
+	For each ($key; $instance.data)
 		
-		$instance.data[$key]:=$data[$key]
+		If ($key="parent")
+			
+			continue
+			
+		End if 
+		
+		OB REMOVE:C1226($instance.data; $key)
 		
 	End for each 
+	
+	// Populate data if any
+	If ($data#Null:C1517)
+		
+		var $key : Text
+		
+		For each ($key; $data)
+			
+			$instance.data[$key]:=$data[$key]
+			
+		End for each 
+	End if 
 	
 	OBJECT SET VALUE:C1742($name; $instance.data)
 	
@@ -202,7 +219,7 @@ Function onResize()
 	var $width : Integer
 	
 	OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)
-	OBJECT GET COORDINATES:C663(*; "Rectangle"; $left; $top; $right; $bottom)
+	OBJECT GET COORDINATES:C663(*; "main"; $left; $top; $right; $bottom)
 	
 	$hOffset:=($width/2)-($left+(($right-$left)/2))
 	$vOffset:=($height/4)-$top
