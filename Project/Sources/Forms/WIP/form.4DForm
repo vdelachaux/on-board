@@ -1,0 +1,66 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onResize"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"main": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 122,
+					"height": 45,
+					"borderRadius": 10,
+					"fill": "#1e90ff",
+					"stroke": "#FFFFFF"
+				},
+				"Spinner": {
+					"type": "spinner",
+					"left": 7,
+					"top": 5,
+					"width": 32,
+					"height": 34,
+					"events": []
+				},
+				"Text": {
+					"type": "text",
+					"text": "Loading",
+					"top": 14,
+					"left": 49,
+					"width": 64,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				}
+			}
+		}
+	],
+	"geometryStamp": 35,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

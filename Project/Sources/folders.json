@@ -14,14 +14,16 @@
 	"HDI": {
 		"methods": [
 			"COMPILER_DEMO",
-			"DO SOMETHING"
+			"DO SOMETHING",
+			"WIP"
 		],
 		"forms": [
 			"BACK",
 			"HDI",
 			"MESSAGE",
 			"PROGRESS",
-			"SELECTOR"
+			"SELECTOR",
+			"WIP"
 		]
 	},
 	"trash": {

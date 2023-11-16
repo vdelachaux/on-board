@@ -13,7 +13,6 @@
 		"onLoad",
 		"onResize"
 	],
-	"windowTitle": "window title",
 	"destination": "detailScreen",
 	"pages": [
 		{
@@ -34,13 +33,13 @@
 					"sizingX": "grow",
 					"sizingY": "grow"
 				},
-				"dialog": {
+				"on-board": {
 					"type": "subform",
 					"left": 19,
 					"top": 393,
 					"width": 20,
 					"height": 20,
-					"method": "ObjectMethods/dialog.4dm",
+					"method": "ObjectMethods/on-board.4dm",
 					"sizingX": "grow",
 					"sizingY": "grow"
 				},
@@ -86,21 +85,6 @@
 					"fontSize": 24,
 					"textAlign": "center",
 					"sizingX": "grow"
-				}
-			}
-		},
-		{
-			"objects": {
-				"Text1": {
-					"type": "text",
-					"text": "Page 2",
-					"top": 186,
-					"left": 19,
-					"width": 666,
-					"height": 29,
-					"fontSize": 24,
-					"textAlign": "center",
-					"sizingX": "grow"
 				},
 				"doSomething": {
 					"type": "button",
@@ -119,9 +103,9 @@
 		},
 		{
 			"objects": {
-				"Text2": {
+				"Text1": {
 					"type": "text",
-					"text": "Page 3",
+					"text": "Page 2",
 					"top": 186,
 					"left": 19,
 					"width": 666,
@@ -133,7 +117,7 @@
 				"showSelector": {
 					"type": "button",
 					"text": "Selector",
-					"top": 91,
+					"top": 96,
 					"left": 31,
 					"width": 93,
 					"height": 22,
@@ -144,9 +128,37 @@
 					"focusable": false
 				}
 			}
+		},
+		{
+			"objects": {
+				"Text2": {
+					"type": "text",
+					"text": "Page 3",
+					"top": 186,
+					"left": 19,
+					"width": 666,
+					"height": 29,
+					"fontSize": 24,
+					"textAlign": "center",
+					"sizingX": "grow"
+				},
+				"workInProgress": {
+					"type": "button",
+					"text": "Work in progress…",
+					"top": 96,
+					"left": 34,
+					"width": 141,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/workInProgress.4dm",
+					"focusable": false
+				}
+			}
 		}
 	],
-	"geometryStamp": 161,
+	"geometryStamp": 177,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
