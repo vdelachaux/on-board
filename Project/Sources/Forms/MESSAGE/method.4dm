@@ -6,12 +6,12 @@ Case of
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Load:K2:1)
 		
-		Form:C1466.parent.alert.onLoad()
+		Form:C1466.me.onLoad()
 		
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Resize:K2:27)
 		
-		Form:C1466.parent.alert.onResize()
+		Form:C1466.me.onResize()
 		
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 End case 

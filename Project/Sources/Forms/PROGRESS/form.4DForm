@@ -13,8 +13,7 @@
 	"bottomMargin": 0,
 	"events": [
 		"onLoad",
-		"onResize",
-		"onBoundVariableChange"
+		"onResize"
 	],
 	"windowTitle": "window title",
 	"destination": "detailScreen",

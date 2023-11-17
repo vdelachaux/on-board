@@ -3,11 +3,14 @@ $e:=FORM Event:C1606
 
 If ($e.code<0)
 	
-	var $name : Text
+	var $name : Text  // The name of the container
 	$name:=OBJECT Get name:C1087(Object current:K67:2)
 	
-	// Get data associated with the subform
-	var $data : Object
+	var $form : Text
+	var $ptr : Pointer  // The name of the current displayed sub-form
+	OBJECT GET SUBFORM:C1139(*; $name; $ptr; $form)
+	
+	var $data : Object  // The data associated with the subform (Form)
 	$data:=OBJECT Get value:C1743($name)
 	
 /*

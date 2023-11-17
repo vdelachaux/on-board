@@ -1,20 +1,25 @@
 property form : Text
 property instances : Collection
 
-Class constructor($name : Text; $form : Text; $parent : Object)
+Class constructor($widget : Text; $form : Text)
 	
 	This:C1470.form:=$form  // The form to use as a sub-form
 	
 	This:C1470.instances:=[{\
-		name: $name; \
-		data: {parent: $parent}\
+		name: $widget; \
+		data: {}\
 		}]
 	
 	// Make sure the widget is invisible
-	OBJECT SET VISIBLE:C603(*; $name; False:C215)
+	OBJECT SET VISIBLE:C603(*; $widget; False:C215)
 	
 	// Make sure the widget is vertically and horizontally expandable
-	OBJECT SET RESIZING OPTIONS:C1175(*; $name; Resize horizontal grow:K42:8; Resize vertical grow:K42:11)
+	OBJECT SET RESIZING OPTIONS:C1175(*; $widget; Resize horizontal grow:K42:8; Resize vertical grow:K42:11)
+	
+	// ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==>
+Function set me($me : cs:C1710.onBoard)
+	
+	This:C1470.instances[0].data.me:=$me
 	
 	// <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <==
 	// Returns the name of the widget on the current page
@@ -31,11 +36,11 @@ Function get name() : Text
 	// Displays widget
 Function show($data : Object)
 	
-	var $name : Text
-	$name:=This:C1470.name
+	var $widget : Text
+	$widget:=This:C1470.name
 	
 	var $instance : Object
-	$instance:=This:C1470.instances.query("name = :1"; $name).first()
+	$instance:=This:C1470.instances.query("name = :1"; $widget).first()
 	
 	If ($instance=Null:C1517)
 		
@@ -44,11 +49,11 @@ Function show($data : Object)
 		FORM GET OBJECTS:C898($names; Form current page:K67:6)
 		
 		var $ptr : Pointer
-		OBJECT DUPLICATE:C1111(*; This:C1470.instances[0].name; $name; $ptr; $names{Size of array:C274($names)})
+		OBJECT DUPLICATE:C1111(*; This:C1470.instances[0].name; $widget; $ptr; $names{Size of array:C274($names)})
 		
 		var $page : Integer
 		$page:=FORM Get current page:C276
-		This:C1470.instances[$page]:={name: $name; data: This:C1470.instances[0].data}
+		This:C1470.instances[$page]:={name: $widget; data: This:C1470.instances[0].data}
 		$instance:=This:C1470.instances[$page]
 		
 	End if 
@@ -56,7 +61,7 @@ Function show($data : Object)
 	// Reset
 	For each ($key; $instance.data)
 		
-		If ($key="parent")
+		If ($key="parent") | ($key="me")
 			
 			continue
 			
@@ -78,36 +83,56 @@ Function show($data : Object)
 		End for each 
 	End if 
 	
-	OBJECT SET VALUE:C1742($name; $instance.data)
+	OBJECT SET VALUE:C1742($widget; $instance.data)
 	
 	// Set the widget associated subform
-	OBJECT SET SUBFORM:C1138(*; $name; String:C10(This:C1470.form))
+	OBJECT SET SUBFORM:C1138(*; $widget; String:C10(This:C1470.form))
 	
 	// Place
 	var $height; $width : Integer
 	OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)
-	OBJECT SET COORDINATES:C1248(*; $name; 0; 0; $width; $height)
+	OBJECT SET COORDINATES:C1248(*; $widget; 0; 0; $width; $height)
 	
 	// Show
-	OBJECT SET VISIBLE:C603(*; $name; True:C214)
+	OBJECT SET VISIBLE:C603(*; $widget; True:C214)
+	
+	// === === === === === === === === === === === === === === === === === ===
+Function close()
+	
+	Form:C1466.close:=True:C214
+	CALL SUBFORM CONTAINER:C1086(-1)
+	
+	// === === === === === === === === === === === === === === === === === ===
+Function accept()
+	
+	Form:C1466.ok:=True:C214
+	Form:C1466.close:=True:C214
+	CALL SUBFORM CONTAINER:C1086(-1)
+	
+	// === === === === === === === === === === === === === === === === === ===
+Function cancel()
+	
+	Form:C1466.cancel:=True:C214
+	Form:C1466.close:=True:C214
+	CALL SUBFORM CONTAINER:C1086(-1)
 	
 	// === === === === === === === === === === === === === === === === === ===
 	// Hides widget
-Function hide($name : Text)
+Function hide($widget : Text)
 	
-	$name:=$name || This:C1470.name
-	OBJECT SET VISIBLE:C603(*; $name; False:C215)
+	$widget:=$widget || This:C1470.name
+	OBJECT SET VISIBLE:C603(*; $widget; False:C215)
 	
 	// <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <==
 	// Returns the data of the widget on the current page
 Function get data() : Object
 	
-	var $name : Text
-	$name:=This:C1470.name
+	var $widget : Text
+	$widget:=This:C1470.name
 	
-	If (OBJECT Get type:C1300(*; $name)#Object type unknown:K79:1)
+	If (OBJECT Get type:C1300(*; $widget)#Object type unknown:K79:1)
 		
-		return OBJECT Get value:C1743($name)
+		return OBJECT Get value:C1743($widget)
 		
 	End if 
 	
@@ -115,10 +140,10 @@ Function get data() : Object
 	// Sets the data of the widget on the current page
 Function set data($data : Object)
 	
-	var $name : Text
-	$name:=This:C1470.name
+	var $widget : Text
+	$widget:=This:C1470.name
 	
-	If (OBJECT Get type:C1300(*; $name)#Object type unknown:K79:1)
+	If (OBJECT Get type:C1300(*; $widget)#Object type unknown:K79:1)
 		
 		OBJECT SET VALUE:C1742(This:C1470.name; $data)
 		

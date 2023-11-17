@@ -1,2 +1,1 @@
-Form:C1466.close:=True:C214
-CALL SUBFORM CONTAINER:C1086(-1)
+Form:C1466.me.close()

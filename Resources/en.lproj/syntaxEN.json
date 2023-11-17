@@ -3,21 +3,16 @@
 	"cs.onBoard": {
 		"onBoard": {
 			"new()": {
-				"Syntax": "**.new**( *name* : Text; *form* : Text; *parent* : Object )",
+				"Syntax": "**.new**( *widget* : Text; *form* : Text )",
 				"Params": [
 					[
-						"name",
+						"widget",
 						"Text",
 						"->"
 					],
 					[
 						"form",
 						"Text",
-						"->"
-					],
-					[
-						"parent",
-						"Object",
 						"->"
 					]
 				],
@@ -52,15 +47,31 @@
 			],
 			"Summary": ""
 		},
-		"show()": {
-			"Syntax": "**.show**( *data* : Object )",
+		"get data()": {
+			"Syntax": "**.get data**() : Object",
 			"Params": [
 				[
-					"data",
+					"",
 					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"hide()": {
+			"Syntax": "**.hide**( *widget* : Text )",
+			"Params": [
+				[
+					"widget",
+					"Text",
 					"->"
 				]
 			],
+			"Summary": ""
+		},
+		"accept()": {
+			"Syntax": "**.accept**()",
+			"Params": [],
 			"Summary": ""
 		},
 		"set data()": {
@@ -74,26 +85,25 @@
 			],
 			"Summary": ""
 		},
-		"hide()": {
-			"Syntax": "**.hide**( *name* : Text )",
+		"close()": {
+			"Syntax": "**.close**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"show()": {
+			"Syntax": "**.show**( *data* : Object )",
 			"Params": [
 				[
-					"name",
-					"Text",
+					"data",
+					"Object",
 					"->"
 				]
 			],
 			"Summary": ""
 		},
-		"get data()": {
-			"Syntax": "**.get data**() : Object",
-			"Params": [
-				[
-					"",
-					"Object",
-					"<-"
-				]
-			],
+		"cancel()": {
+			"Syntax": "**.cancel**()",
+			"Params": [],
 			"Summary": ""
 		},
 		"get name()": {
@@ -103,6 +113,17 @@
 					"",
 					"Text",
 					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"set me()": {
+			"Syntax": "**.set me**( *me* : cs.onBoard.onBoard )",
+			"Params": [
+				[
+					"me",
+					"cs.onBoard.onBoard",
+					"->"
 				]
 			],
 			"Summary": ""

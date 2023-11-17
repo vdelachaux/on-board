@@ -14,7 +14,7 @@ Case of
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Resize:K2:27)
 		
-		Form:C1466.parent.wip.onResize()
+		Form:C1466.me.onResize()
 		
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 End case 

@@ -6,7 +6,7 @@ Case of
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Load:K2:1)
 		
-		Form:C1466.parent.selector.onLoad()
+		Form:C1466.me.onLoad()
 		OBJECT SET ENABLED:C1123(*; "previous"; False:C215)
 		
 		var $i : Integer
@@ -16,7 +16,7 @@ Case of
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Resize:K2:27)
 		
-		Form:C1466.parent.selector.onResize()
+		Form:C1466.me.onResize()
 		
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Page Change:K2:54)

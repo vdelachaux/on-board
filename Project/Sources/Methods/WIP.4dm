@@ -1,6 +1,7 @@
 //%attributes = {}
 #DECLARE($caller : Integer)
 
+
 // Simulate work
 DELAY PROCESS:C323(Current process:C322; 100)
 
