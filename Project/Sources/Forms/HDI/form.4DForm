@@ -11,7 +11,8 @@
 	"windowMaxHeight": 32767,
 	"events": [
 		"onLoad",
-		"onResize"
+		"onResize",
+		"onPageChange"
 	],
 	"destination": "detailScreen",
 	"pages": [
@@ -141,24 +142,11 @@
 					"fontSize": 24,
 					"textAlign": "center",
 					"sizingX": "grow"
-				},
-				"workInProgress": {
-					"type": "button",
-					"text": "Work in progress…",
-					"top": 96,
-					"left": 34,
-					"width": 141,
-					"height": 22,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/workInProgress.4dm",
-					"focusable": false
 				}
 			}
 		}
 	],
-	"geometryStamp": 177,
+	"geometryStamp": 178,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

@@ -117,6 +117,17 @@
 			],
 			"Summary": ""
 		},
+		"get instance()": {
+			"Syntax": "**.get instance**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
 		"set me()": {
 			"Syntax": "**.set me**( *me* : cs.onBoard.onBoard )",
 			"Params": [

@@ -13,6 +13,8 @@ Case of
 		FORM GET PROPERTIES:C674(Current form name:C1298; $i; $i; $i)
 		Form:C1466.numPages:=$i
 		
+		FORM GOTO PAGE:C247(Num:C11(Form:C1466.value)+1; *)
+		
 		//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 	: ($e.code=On Resize:K2:27)
 		

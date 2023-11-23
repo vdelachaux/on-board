@@ -21,4 +21,13 @@ Case of
 		Form:C1466.wip.me:=Form:C1466.wip
 		
 		//______________________________________________________
+	: ($e.code=On Page Change:K2:54)
+		
+		If (FORM Get current page:C276=3)
+			
+			Form:C1466.wip.show()
+			
+		End if 
+		
+		//______________________________________________________
 End case 
