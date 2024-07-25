@@ -8,7 +8,7 @@ Thanks to this class, the unglamorous work is taken care of:
 * control it from a worker
 * reposition it if the main form is resized.
 
-You can concentrate on your dialogues without worrying about the mechanics.
+You can concentrate on your dialogs without worrying about the mechanics.
 
 ##  
 
